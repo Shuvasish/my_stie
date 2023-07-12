@@ -10,12 +10,6 @@
 {% endblock css_files %}
 
 {% block content %}
-    <header id="main-navigation">
-        <h1><a href="">Shuvo's Blog</a></h1>
-        <nav>
-            <a href="">All Posts</a>
-        </nav>
-    </header>
     <section id="welcome">
         <header>
             <img src="{%static 'blog/images/logo.png' %}" alt="shuvo-the author of everythong">
@@ -26,17 +20,7 @@
     <section id="latest-posts">
         <h2>My latest thoughts</h2>
         <ul>
-            <li>
-                <article id="post">
-                    <a href="">
-                        <img src="{% static 'blog/images/mountains.jpg' %}" alt="mountain hiking">
-                        <div id="post__content">
-                            <h3>mountain hiking</h3>
-                            <p>There's nothing like views. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi asperiores quisquam nisi ratione, harum non corporis delectus minus, dicta consequuntur accusamus, odit ex in quod!</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% include 'blog/includes/post.html' %}
         </ul>
     </section>
     <section id="about">
