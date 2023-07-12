@@ -1,11 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    My Blog
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+    <header id="main-navigation">
+        <h1><a href="">Shuvo's Blog</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+    <section id="welcome">
+        <header>
+            <img src="{%static 'blog/images/logo.png' %}" alt="shuvo-the author of everythong">
+            <p>Hi, I am shuvo and i love to blog about tech and the world!</p>
+        </header>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My latest thoughts</h2>
+        <ul>
+            <li>
+                <article id="post">
+                    <a href="">
+                        <img src="{% static 'blog/images/mountains.jpg' %}" alt="mountain hiking">
+                        <div id="post__content">
+                            <h3>mountain hiking</h3>
+                            <p>There's nothing like views. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi asperiores quisquam nisi ratione, harum non corporis delectus minus, dicta consequuntur accusamus, odit ex in quod!</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+    <section id="about">
+        <h2>What I do</h2>
+        <p>I love to help others and I enjoy recognizing</p>
+        <p>If you want others to be happy, practice compassion. If you want to be happy, practice compassion.</p>
+    </section>
+{% endblock content %}
