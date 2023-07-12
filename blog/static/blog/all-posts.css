@@ -28,13 +28,49 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
     gap: 1.5rem;
   }
-  
-  .post img {
-    width: 7rem;
-    height: 7rem;
+
+  ul li{
+    background-color: #fff;
+    padding: 30px 15px;
+    border-radius: 5px;
+  }
+
+  #all-posts ul li:hover{
+    background-color: #cf0808 !important;
+    padding: 40px 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   }
   
-  .post a {
+  #post img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    
+  }
+  #post{
+    text-align: center;
+    color: #353535;
+  }
+  
+  #post a{
+    color: #353535;
+    text-decoration: none;
+    
+  
+  #post__content h3{
+    font-weight: bold;
+  
+  }
+  
+  #post a img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+  }
+  
+  #post a {
     height: 22rem;
     transform-origin: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
