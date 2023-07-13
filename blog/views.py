@@ -47,11 +47,12 @@ all_posts = [
         'content': '''
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis alias asperiores laborum sit. Dolores assumenda non, ab error ex veritatis accusamus quam. Autem esse amet debitis quas aliquam molestiae! Dolor.
 
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis alias asperiores laborum sit. Dolores assumenda non, ab error ex veritatis accusamus quam. Autem esse amet debitis quas aliquam molestiae! Dolor.
 
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis alias asperiores laborum sit. Dolores assumenda non, ab error ex veritatis accusamus quam. Autem esse amet debitis quas aliquam molestiae! Dolor.
-                    
-'''
+        
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis alias asperiores laborum sit. Dolores assumenda non, ab error ex veritatis accusamus quam. Autem esse amet debitis quas aliquam molestiae! Dolor.
+        '''
     },
 ]
 
@@ -74,8 +75,13 @@ def starting_page(request):
 
 
 def posts(request):
-    return render(request, 'blog/all-posts.html')
+    return render(request, 'blog/all-posts.html', {
+        'all_posts': all_posts
+    })
 
 
 def post_details(request, slug):
-    return render(request, 'blog/post-details.html')
+    identified_post = next(post for post in all_posts if post['slug'] == slug)
+    return render(request, 'blog/post-details.html', {
+        'post': identified_post
+    })
