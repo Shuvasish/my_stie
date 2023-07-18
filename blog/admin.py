@@ -3,6 +3,11 @@ from .models import Post, Author, Tag
 
 # Register your models here.
 
-admin.site.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_filter = ("Author", "tags", "date",)
+    list_display = ("title", "date", "Author",)
+    prepopulated_fields = {"slug": ('title',)}
+
+admin.site.register(Post, PostAdmin)
 admin.site.register(Author)
 admin.site.register(Tag)
