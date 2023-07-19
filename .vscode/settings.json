@@ -1,6 +1,6 @@
 {
     "python.pythonPath": "/usr/local/bin/python3",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "python.languageServer": "Pylance",
     "files.associations": {
         "**/*.html": "html",
